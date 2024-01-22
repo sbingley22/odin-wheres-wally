@@ -1,1 +1,6 @@
 server/node_modules
+server/dist
+
+front-end/node_modules
+front-end/dist
+
