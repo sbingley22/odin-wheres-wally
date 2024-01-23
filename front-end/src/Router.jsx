@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider, useParams } from "react-router-dom"
 import App from "./App"
 import ErrorPage from "./components/ErrorPage"
 import Game from "./components/Game"
@@ -11,16 +11,17 @@ const Router = () => {
       errorElement: <ErrorPage />,
     },
     {
-      path: "/game",
-      element: <Game />,
+      path: "/game/:id",
+      element: <GameWrapper />,
     },
-    // {
-    //   path: "/blogs/:blogid",
-    //   element: <Blog />,
-    // },
   ])
 
   return <RouterProvider router={router} />
 }
+
+const GameWrapper = () => {
+  const { id } = useParams();
+  return <Game level={id} />;
+};
 
 export default Router

@@ -12,11 +12,20 @@ const Header = () => {
           <span className="navbar-toggler-label">Characters</span>
         </Navbar.Toggle>
         <Navbar.Collapse id='basic-navbar-nav' >
-          <Nav className='ml-auto'>
-            <div>
-              <img src="/wally.JPG" alt='Wally' className='img-fluid image-icon'/>
-              <img src='/wallete.JPG' alt='Wallete' className='img-fluid image-icon'/>
-              <img src='/evil.JPG' alt='Evil' className='img-fluid image-icon'/>
+          <Nav className='ml-auto d-flex justify-content-center'>
+            <div className='d-flex justify-content-center'>
+              <div className='image-container'>
+                <img src="/wally.JPG" alt='Dracula' className='img-fluid image-icon'/>
+                <h6>Dracula</h6>
+              </div>
+              <div className='image-container'>
+                <img src='/wallete.JPG' alt='Frankenstein' className='img-fluid image-icon'/>
+                <h6>Frankenstein</h6>
+              </div>
+              <div className='image-container'>
+                <img src='/evil.JPG' alt='Werewolf' className='img-fluid image-icon'/>
+                <h6>Werewolf</h6>
+              </div>
             </div>
           </Nav>
         </Navbar.Collapse>

@@ -18,3 +18,15 @@
   text-decoration: none;
   color: inherit;
 }
+
+.hud {
+  position: absolute;
+}
+
+.image-container {
+  display: inline;
+}
+
+.image-container h6 {
+  color: antiquewhite;
+}

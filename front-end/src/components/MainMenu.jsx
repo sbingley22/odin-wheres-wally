@@ -4,7 +4,7 @@ import Game from './Game'
 const MainMenu = () => {
   return (
     <div className="main-menu">
-      <Link to="/game">Play Game</Link>
+      <Link to="/game/1">Play Game</Link>
     </div>
   )
 }
