@@ -17,3 +17,6 @@ level=1&name=Jess&time=90.2
 
 ###
 
+GET http://localhost:3000/api/leaderboards
+
+###

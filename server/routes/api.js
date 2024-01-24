@@ -22,11 +22,37 @@ router.get('/levels/:index', async function(req, res, next) {
 
 router.get('/leaderboards/:index', async function(req, res, next) {
   const index = req.params.index
-  const leaderboard = await Leaderboard.find({level: index}).exec()
+  const leaderboard = await Leaderboard.find({level: index})
+  .sort({ time: 1})
+  .limit(3)
+  .exec()
 
   if (!leaderboard) return res.status(404).json({ error: 'Leaderboard not found' })
 
   const data = {leaderboard: leaderboard}
+
+  res.json(data)
+})
+
+router.get('/leaderboards', async function(req, res, next) {
+  const leaderboards = await Promise.all([
+    Leaderboard.find({level: 1})
+    .sort({ time: 1})
+    .limit(3)
+    .exec(),
+    Leaderboard.find({level: 2})
+    .sort({ time: 1})
+    .limit(3)
+    .exec(),
+    Leaderboard.find({level: 3})
+    .sort({ time: 1})
+    .limit(3)
+    .exec(),
+  ])
+
+  if (!leaderboards) return res.status(404).json({ error: 'Leaderboards not found' })
+
+  const data = {leaderboards: leaderboards}
 
   res.json(data)
 })
