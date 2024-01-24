@@ -1,0 +1,19 @@
+GET http://localhost:3000/api/
+
+###
+
+GET http://localhost:3000/api/levels/1
+
+###
+
+GET http://localhost:3000/api/leaderboards/1
+
+###
+
+POST http://localhost:3000/api/leaderboards
+Content-Type: application/x-www-form-urlencoded
+
+level=1&name=Jess&time=90.2
+
+###
+
