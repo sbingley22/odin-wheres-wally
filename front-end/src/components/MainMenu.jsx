@@ -8,17 +8,17 @@ const MainMenu = () => {
   const [cardData, setCardData] = useState([
     {
       id: 1,
-      imageUrl: 'whitby1.jpg',
+      imageUrl: 'whitby1.png',
       listItems: [],
     },
     {
       id: 2,
-      imageUrl: 'whitby2.jpg',
+      imageUrl: 'whitby2.png',
       listItems: [],
     },
     {
       id: 3,
-      imageUrl: 'whitby2.jpg',
+      imageUrl: 'whitby3.png',
       listItems: [],
     },
   ])

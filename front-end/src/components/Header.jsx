@@ -19,15 +19,15 @@ const Header = () => {
           <Nav className='ml-auto d-flex justify-content-center'>
             <div className='d-flex justify-content-center'>
               <div className='image-container'>
-                <img src="/dracula.JPG" alt='Dracula' className='img-fluid image-icon'/>
+                <img src="/dracula.png" alt='Dracula' className='img-fluid image-icon'/>
                 <h6>Dracula</h6>
               </div>
               <div className='image-container'>
-                <img src='/bat.JPG' alt='Bat' className='img-fluid image-icon'/>
+                <img src='/bat.png' alt='Bat' className='img-fluid image-icon'/>
                 <h6>Bat</h6>
               </div>
               <div className='image-container'>
-                <img src='/hound.JPG' alt='Hound' className='img-fluid image-icon'/>
+                <img src='/hound.png' alt='Hound' className='img-fluid image-icon'/>
                 <h6>Hound</h6>
               </div>
             </div>

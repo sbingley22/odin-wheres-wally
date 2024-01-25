@@ -24,7 +24,7 @@ async function main() {
   console.log("Debug: About to connect");
   await mongoose.connect(mongoDB);
   console.log("Debug: Should be connected?");
-  //await createLeaderboards();
+  await createLeaderboards();
   await createLevels();
   console.log("Debug: Closing mongoose");
   mongoose.connection.close();
@@ -50,35 +50,52 @@ async function createLevels() {
   const data1 = [
     {
       character: "Dracula",
-      x: 0.01,
-      y: 0.01,
+      x: 0.75,
+      y: 0.57,
     },
     {
       character: "Bat",
-      x: 0.5,
-      y: 0.5,
+      x: 0.57,
+      y: 0.22,
     },
     {
       character: "Hound",
-      x: 0.99,
-      y: 0.01,
+      x: 0.55,
+      y: 0.52,
     },
   ]
   const data2 = [
     {
       character: "Dracula",
-      x: 0.01,
-      y: 0.01,
+      x: 0.92,
+      y: 0.42,
     },
     {
       character: "Bat",
-      x: 0.5,
-      y: 0.5,
+      x: 0.92,
+      y: 0.62,
     },
     {
       character: "Hound",
-      x: 0.99,
-      y: 0.01,
+      x: 0.78,
+      y: 0.94,
+    },
+  ]
+  const data3 = [
+    {
+      character: "Dracula",
+      x: 0.14,
+      y: 0.52,
+    },
+    {
+      character: "Bat",
+      x: 0.82,
+      y: 0.05,
+    },
+    {
+      character: "Hound",
+      x: 0.07,
+      y: 0.37,
     },
   ]
 
@@ -90,6 +107,10 @@ async function createLevels() {
     createLevel(
       2,
       data2
+    ),
+    createLevel(
+      3,
+      data3
     )
   ])
 }

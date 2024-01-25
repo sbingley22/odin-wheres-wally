@@ -8,7 +8,7 @@ import WinForm from "./WinForm";
 const apiUrl = import.meta.env.VITE_API_URL
 
 const Game = ( { level } ) => {
-  const image = `/whitby${level}.jpg`
+  const image = `/whitby${level}.png`
 
   const [pos, setPos] = useState([-1,-1])
   const [realPos, setRealPos] = useState([-1,-1])
@@ -51,7 +51,7 @@ const Game = ( { level } ) => {
     const normalizedX = x / imageWidth;
     const normalizedY = y / imageHeight;
   
-    //console.log("click: ", normalizedX, normalizedY);
+    console.log("click: ", normalizedX, normalizedY);
 
     if (showDropDown) {
       // close drop down
