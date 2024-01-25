@@ -26,6 +26,7 @@ var app = express();
 
 // Enable CORS
 app.use(cors())
+app.options('*', cors());
 
 app.use(logger('dev'));
 app.use(express.json());

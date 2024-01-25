@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const Level = require('../models/level')
 const Leaderboard = require('../models/leaderboard');
-const leaderboard = require('../models/leaderboard');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -58,7 +57,7 @@ router.get('/leaderboards', async function(req, res, next) {
 })
 
 router.post('/leaderboards', async function(req, res, next) {
-  const entry = new leaderboard({
+  const entry = new Leaderboard({
     level: req.body.level,
     name: req.body.name,
     time: req.body.time,
