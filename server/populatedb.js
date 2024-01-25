@@ -7,7 +7,7 @@ console.log(
 
   node populatedb "mongodb+srv://sbingley22:kA2AOUKQji9ce7YJ@cluster0.b9keqnj.mongodb.net/wheres-wally?retryWrites=true&w=majority"
 
-  node populatedb "mongodb+srv://sbingley22-main-db-00c08962ed3:HwvpnbYdT2rmg8gqkYxQYXcadEcTwD@prod-us-central1-3.yr9so.mongodb.net/sbingley22-main-db-00c08962ed3" `
+  node populatedb "mongodb+srv://sbingley22-main-db-03daa5522a8:UgxB74HgngXgEKKXdjnFEQekhPUTJy@prod-us-central1-3.yr9so.mongodb.net/sbingley22-main-db-03daa5522a8" `
 );
 
 // Get arguments passed on command line
