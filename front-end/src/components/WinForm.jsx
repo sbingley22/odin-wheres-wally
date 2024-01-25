@@ -31,6 +31,7 @@ const WinForm = ( { level, time } ) => {
       const url = `${apiUrl}api/leaderboards`;
       const response = await fetch(url, {
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
         },

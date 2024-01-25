@@ -41,7 +41,13 @@ const MainMenu = () => {
     const fetchData = async () => {
       try {
         const url = `${apiUrl}api/leaderboards`
-        const response = await fetch(url)
+        const response = await fetch(url, {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
         const jsonData = await response.json()
         //console.log(jsonData.leaderboards)
         updateCards(jsonData.leaderboards)
